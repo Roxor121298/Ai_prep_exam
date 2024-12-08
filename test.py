@@ -60,7 +60,46 @@ data1 = np.linspace(0, 10, 10, dtype=np.int32)
 data2 = np.linspace(11,19,9).reshape(3,3)
 data3 = np.full((4,4), 1)
 
-print(data2)
+
+a = data1[1]
+b = data2[1,1]
+c = data2[0,0]
+d = data3[3,3]
+
+a = b + c * d
+
+
+sol1 = np.arange(10)
+
+# Solution 2
+
+sol2 = sol1 = np.arange(10)
+
+# Solution 2
+
+sol2 = np.arange(2, 22, 2)
+
+def sumindice (i,j):
+    return i+j
+
+rng = np.random.default_rng()
+sol7 = rng.random(size=(3,4))
+
+sol7 = sol7.reshape(2,6)
+
+
+sol7 = sol7.flatten()
+
+
+
+sol8 = np.full((4,4), 1)
+
+sol8 = sol8.flatten()
+
+sol8 = sol8.reshape(2,8)
+
+print(sol8)
+
 
 
 
