@@ -98,7 +98,40 @@ sol8 = sol8.flatten()
 
 sol8 = sol8.reshape(2,8)
 
-print(sol8)
+rng = np.random.default_rng()
+sol9 = rng.uniform(low=10,high=100,size=(5,5))
+
+sol9.astype(np.float32)
+
+# Solution 10
+
+# Créez un tableau 2D de 12 x 2 nombres réels aléatoires entre [0, 2[. 
+# Le transformer en matrice 3 x 8, puis convertir les éléments en nombres entiers. 
+# Finalement, le transformer en matrice 1D en valeurs booléennes.
+
+
+
+sol10 = np.random.default_rng().uniform(low=0,high=2, size=(12,2))
+sol10 = sol10.reshape(3,8)
+sol10 = sol10.astype(np.int32)
+sol10 = sol10.astype(np.bool_).flatten()
+
+
+data = np.arange(3*3*3*3).reshape(3,3,3,3) 
+
+
+rng = np.random.default_rng()
+
+def prodmatrice(data1, data2):
+    return data1 * data2
+
+data1 = rng.uniform(low=-10, high=10,size=(12,2))
+data2 = rng.random(size=(12,2))
+
+data3 = data1 * data2
+
+
+print(data2[:,-2:])
 
 
 
